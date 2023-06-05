@@ -3,14 +3,21 @@ const { createApp } = updated()
 createApp({
     data() {
         return {
-            apiUrl: '',
+            apiUrl: 'server.php',
             data: ''
         }
     },
     methods: {
-
+        ApiCall() {
+            axios.get(this.ApiUrl)
+                .then((res) => {
+                    this.data = res.data;
+                })
+        }
     },
-    mounted() {
 
-    }
+
+
 }).mount('#app')
+
+
