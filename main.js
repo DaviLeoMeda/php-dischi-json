@@ -15,6 +15,9 @@ createApp({
                 })
         }
     },
+    mounted() {
+        this.ApiCall();
+    }
 
 
 
