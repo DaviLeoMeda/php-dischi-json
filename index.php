@@ -23,9 +23,9 @@
 
                 <div class="row">
 
-                    <div v-for="(elem, index) in data" :key="index">
+                    <div class="col-4" v-for="(elem, index) in data" :key="index">
 
-                        <div class="card" style="width: 18rem;">
+                        <div class="card" @click="showSingleCard (index)" style="width: 18rem;">
                           <img :src="elem.poster" class="card-img-top" alt="...">
                           <div class="card-body">
                             <h5 class="card-title">{{elem.artist}}</h5>

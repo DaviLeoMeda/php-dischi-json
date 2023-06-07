@@ -4,7 +4,8 @@ createApp({
     data() {
         return {
             apiUrl: 'server.php',
-            data: ''
+            data: '',
+            DiscInfo: '',
         }
     },
     methods: {
@@ -12,6 +13,16 @@ createApp({
             axios.get(this.ApiUrl)
                 .then((res) => {
                     this.data = res.data;
+                })
+        },
+        showSingleCard(i) {
+            const dataIndex = {
+                discIndex: i
+            }
+
+            axios.get(this.apiUrl, { dataIndex })
+                .then((res) => {
+                    res.data = this.DiscInfo;
                 })
         }
     },
