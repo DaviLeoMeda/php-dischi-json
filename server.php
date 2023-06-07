@@ -7,10 +7,7 @@ var_dump($disc_albums);
 
 
 
-
-
-
-if( isset)($_GET['discIndex'] && $_GET['discIndex'] !== ''){
+if( isset( $_GET['discIndex']) && $_GET['discIndex'] !== ''){
     $disc_index = $_GET['discIndex'];
 
     $singleDisc = $disc_albums[$disc_index];
@@ -19,7 +16,7 @@ if( isset)($_GET['discIndex'] && $_GET['discIndex'] !== ''){
 
 } else {
     $completeColl = $disc_albums;
-}
+};
 
 
 header('Content-Type: application/json');
